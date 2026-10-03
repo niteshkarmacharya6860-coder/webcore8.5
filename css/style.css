@@ -1,3 +1,8 @@
+@font-face {
+	font-family: 'TTLakes';
+	src: url(../fonts/TTLakes-Regular.ttf);
+}
+
 * {
 	box-sizing: border-box;
 	padding: 0;
@@ -7,7 +12,8 @@
 body {
 	padding: 0;
 	margin: 0;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'TTLakes', sans-serif;
+	background-color: #f8f8f8;
 }
 
 img {
@@ -21,6 +27,12 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	padding: 15px;
+}
+
+.container {
+	width: 90%;
+	max-width: 1440px;
+	margin: 0 auto;
 }
 
 .logo__with__menu__icon {
@@ -313,7 +325,7 @@ header {
 	padding: 20px;
 }
 
-.brand__card {
+.card {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -324,13 +336,13 @@ header {
 	gap: 10px;
 }
 
-.brand__card > img {
+.card > img {
 	width: auto;
 	height: 30px;
 	object-fit: contain;
 }
 
-.brand__card span img {
+.card span img {
 	width: 30px;
 	height: 30px;
 	object-fit: contain;
@@ -348,4 +360,118 @@ header {
 	border-radius: 5px;
 	transition: background-color 0.3s ease, color 0.3s ease;
 	text-decoration: none;
+	transition: all ease-in-out .3s;
+}
+
+.show__more span {
+	text-wrap: nowrap;
+	color: #333;
+}
+
+.show__more:focus {
+	outline: none;
+}
+
+.repair__body .card {
+	flex-direction: column;
+	gap: 80px;
+	align-items: flex-end;
+}
+
+.repair__body .card p {
+	align-self: flex-start;
+}
+
+.price__body {
+	background-color: #f8f8f8;
+	padding: 20px;
+	width: 100%;
+}
+
+.price__body table {
+	width: 100%;
+	border-radius: 15px;
+	background-color: #fff;
+	border-collapse: separate;
+	overflow: hidden;
+}
+
+.price__body table thead th {
+	text-align: start;
+	padding: 17px 24px;
+}
+
+.price__body table thead,
+.price__body table thead tr {
+	background-color: #f8f8f8;
+}
+
+.price__body table tbody {
+	width: 90%;
+}
+
+.price__body table tr {
+	height: 90px;
+	background-color: #fff;
+}
+
+.price__body table tr td {
+	padding: 17px 24px;
+	font-size: 14px;
+	color: #222;
+	border-bottom: 2px solid #eaeaea;
+}
+
+.price__body table tr:last-child td {
+	border-bottom: none;
+}
+
+.price__body table tr td p{
+	display: flex;
+	justify-content: space-between;
+}
+
+.order__button {
+	background-color: #ff3e79;
+	color: #fff;
+	padding: 8px 16px;
+	border-radius: 20px;
+}
+
+.order__button img {
+	height: 10px;
+	width: 10px;
+}
+
+.term .container>p {
+	padding: 20px;
+	width: 40%;
+	font-size: 14px;
+}
+
+.term .proposal p {
+	padding: 0 20px;
+	display: flex;
+	font-weight: bold;
+	justify-content: space-between;
+	width: 20%;
+	align-items: center;
+}
+
+.term .proposal img {
+	filter: brightness(0) saturate(100%) invert(41%) sepia(96%) saturate(3193%) hue-rotate(319deg) brightness(101%) contrast(102%);
+	width: 10px;
+}
+
+footer {
+	margin-top: 100px;
+	font-size: 14px;
+	color: #7E7E82;
+	padding: 20px 0;
+}
+
+footer .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
